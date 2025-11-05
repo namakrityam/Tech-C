@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RideHub - Car Rental Service</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- adding comments -->
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-car"></i> TECH-C
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#list-car" class="nav-link">Rides</a></li>
+                <li><a href="#list-car" class="nav-link">List Car</a></li>
+                <li><a href="#list-car" class="nav-link">Offers</a></li>
+                <li><a href="#list-car" class="nav-link"><button>Sign-In</button></a></li>
+
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">Find Your Perfect Ride</h1>
+            <p class="hero-subtitle">Rent a car in minutes. Drive with confidence.</p>
+            <button class="hero-btn">Book Now</button>
+        </div>
+    </section>
+
+    <!-- Top Cars for Service Section -->
+    <section class="top-cars" id="list-car">
+        <h2 class="section-title">Top Cars for Service</h2>
+        <div class="carousel-container">
+            <button class="carousel-btn prev" onclick="prevCar()"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel-wrapper">
+                <div class="carousel" id="topCarsCarousel">
+                    <div class="car-card">
+                        <div class="car-image">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>Tesla Model 3</h3>
+                        <p class="rating"><i class="fas fa-star"></i> 4.9 (2,450 bookings)</p>
+                        <p class="price">$45/day</p>
+                    </div>
+                    <div class="car-card">
+                        <div class="car-image">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>BMW X5</h3>
+                        <p class="rating"><i class="fas fa-star"></i> 4.8 (1,890 bookings)</p>
+                        <p class="price">$65/day</p>
+                    </div>
+                    <div class="car-card">
+                        <div class="car-image">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>Honda Civic</h3>
+                        <p class="rating"><i class="fas fa-star"></i> 4.7 (3,120 bookings)</p>
+                        <p class="price">$35/day</p>
+                    </div>
+                    <div class="car-card">
+                        <div class="car-image">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>Toyota Camry</h3>
+                        <p class="rating"><i class="fas fa-star"></i> 4.8 (2,890 bookings)</p>
+                        <p class="price">$40/day</p>
+                    </div>
+                    <div class="car-card">
+                        <div class="car-image">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>Audi A4</h3>
+                        <p class="rating"><i class="fas fa-star"></i> 4.6 (1,560 bookings)</p>
+                        <p class="price">$55/day</p>
+                    </div>
+                    <div class="car-card">
+                        <div class="car-image">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>Hyundai Tucson</h3>
+                        <p class="rating"><i class="fas fa-star"></i> 4.7 (2,340 bookings)</p>
+                        <p class="price">$42/day</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn next" onclick="nextCar()"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Featured Categories Section -->
+    <section class="featured-categories">
+        <h2 class="section-title">Popular Car Categories</h2>
+        <div class="carousel-container">
+            <button class="carousel-btn prev" onclick="prevCategory()"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel-wrapper">
+                <div class="carousel" id="categoriesCarousel">
+                    <div class="category-card">
+                        <div class="category-icon"><i class="fas fa-car-side"></i></div>
+                        <h3>Sedan</h3>
+                        <p>Comfortable & Economical</p>
+                    </div>
+
+
+
+                    <div class="category-card">
+                        <div class="category-icon"><i class="fas fa-cube"></i></div>
+                        <h3>Hatchback</h3>
+                        <p>Compact & Nimble</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon"><i class="fas fa-crown"></i></div>
+                        <h3>Cruiser</h3>
+                        <p>Style & Luxury</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon"><i class="fas fa-mountain"></i></div>
+                        <h3>SUV</h3>
+                        <p>Adventure Ready</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon"><i class="fas fa-person-hiking"></i></div>
+                        <h3>Offroad</h3>
+                        <p>Rugged Performance</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon"><i class="fas fa-van-shuttle"></i></div>
+                        <h3>Van</h3>
+                        <p>Spacious Family</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn next" onclick="nextCategory()"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Nearby Cars Section -->
+    <section class="nearby-cars">
+        <h2 class="section-title">Cars Available Near You</h2>
+        <div class="nearby-grid">
+            <div class="location-card">
+                <div class="location-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <h3>Downtown</h3>
+                <p>12 cars available</p>
+                <p class="distance">2.5 km away</p>
+                <button class="view-btn">View Cars</button>
+            </div>
+            <div class="location-card">
+                <div class="location-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <h3>Airport</h3>
+                <p>28 cars available</p>
+                <p class="distance">8.3 km away</p>
+                <button class="view-btn">View Cars</button>
+            </div>
+            <div class="location-card">
+                <div class="location-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <h3>Mall District</h3>
+                <p>15 cars available</p>
+                <p class="distance">4.1 km away</p>
+                <button class="view-btn">View Cars</button>
+            </div>
+            <div class="location-card">
+                <div class="location-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <h3>Train Station</h3>
+                <p>9 cars available</p>
+                <p class="distance">1.8 km away</p>
+                <button class="view-btn">View Cars</button>
+            </div>
+        </div>
+    </section>
+
+<!-- udated partner section -->
+ <section class="partnerships">
+        <h2 class="section-title">Our Trusted Partners</h2>
+        <div class="marquee-container">
+            <div class="marquee">
+                <div class="marquee-content">
+                    <div class="partner-logo"><i class="fas fa-fan"></i> <span>Michelin Tyres</span></div>
+                    <div class="partner-logo"><i class="fas fa-ring"></i> <span>Bridgestone</span></div>
+                    <div class="partner-logo"><i class="fas fa-car"></i> <span>BMW</span></div>
+                    <div class="partner-logo"><i class="fas fa-car"></i> <span>Toyota</span></div>
+                    <div class="partner-logo"><i class="fas fa-car"></i> <span>Mercedes</span></div>
+                    <div class="partner-logo"><i class="fas fa-ring"></i> <span>Goodyear</span></div>
+                    <div class="partner-logo"><i class="fas fa-car"></i> <span>Honda</span></div>
+                    <div class="partner-logo"><i class="fas fa-fan"></i> <span>Continental</span></div>
+                </div>
+                <div class="marquee-content">
+                    <div class="partner-logo"><i class="fas fa-fan"></i> <span>Michelin Tyres</span></div>
+                    <div class="partner-logo"><i class="fas fa-ring"></i> <span>Bridgestone</span></div>
+                    <div class="partner-logo"><i class="fas fa-car"></i> <span>BMW</span></div>
+                    <div class="partner-logo"><i class="fas fa-car"></i> <span>Toyota</span></div>
+                    <div class="partner-logo"><i class="fas fa-car"></i> <span>Mercedes</span></div>
+                    <div class="partner-logo"><i class="fas fa-ring"></i> <span>Goodyear</span></div>
+                    <div class="partner-logo"><i class="fas fa-car"></i> <span>Honda</span></div>
+                    <div class="partner-logo"><i class="fas fa-fan"></i> <span>Continental</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Reviews Section with Golden Shine -->
+    <section class="reviews">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-header">
+                    <h3>John Doe</h3>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </div>
+                <p>Amazing service! The car was clean and the booking process was seamless. Highly recommended!</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <h3>Sarah Smith</h3>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </div>
+                <p>Great prices and excellent customer support. Will definitely book again for my next trip!</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <h3>Mike Johnson</h3>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </div>
+                <p>Good experience overall. The car quality was excellent and delivery was on time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Social Media -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>RideHub is your trusted car rental partner for all your transportation needs.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#list-car">List Car</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Email: info@ridehub.com</p>
+                <p>Phone: +1-800-RIDEHUB</p>
+            </div>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="social-media">
+            <a href="#" class="social-link">
+                <i class="fab fa-instagram"></i> <span>Instagram</span>
+            </a>
+            <a href="#" class="social-link">
+                <i class="fab fa-facebook"></i> <span>Facebook</span>
+            </a>
+            <a href="#" class="social-link">
+                <i class="fab fa-twitter"></i> <span>Twitter</span>
+            </a>
+            <a href="#" class="social-link">
+                <i class="fab fa-linkedin"></i> <span>LinkedIn</span>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 RideHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
